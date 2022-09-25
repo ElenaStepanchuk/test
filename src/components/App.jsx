@@ -1,3 +1,11 @@
+import Header from './Header';
+import MainBody from './Body';
+
 export const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <Header />
+      <MainBody />
+    </>
+  );
 };
