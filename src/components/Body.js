@@ -17,13 +17,23 @@ import winnerIcon from '../img/body/winnerIcon.png';
 import germany from '../img/body/germany.png';
 import lottoStar from '../img/body/lotoStar.png';
 import photoWon from '../img/body/photoWon.png';
+import bunnerDesktop from '../img/desktop/body/bannerDesktop.png';
 
 const MainBody = () => {
   return (
     <>
-      <BannerImg src={banner} alt="Company`s banner" title="Company`s banner" />
+      <ContainerBannerImg>
+        <source srcset={bunnerDesktop} media="(min-width: 1200px)" />
+        <source srcset={banner} media="(min-width: 375px)" />
+        <BannerImg
+          src={banner}
+          alt="Company`s banner"
+          title="Company`s banner"
+        />
+      </ContainerBannerImg>
+      {/* <BannerImg src={banner} alt="Company`s banner" title="Company`s banner" /> */}
       <BodyContainer>
-        <ul>
+        <ListPickBuyWin>
           <ListItem>
             <ListImg src={computer} alt="It is computer" />
             <ListTitle href="https://github.com/ElenaStepanchuk/test">
@@ -57,9 +67,9 @@ const MainBody = () => {
               value of your winnings.
             </ListText>
           </ListItem>
-        </ul>
+        </ListPickBuyWin>
         <LotteryTitle>Biggect upcoming lottery draw</LotteryTitle>
-        <ul>
+        <LotteryDrawsList>
           <LotteryListItem>
             <LotteryListImg src={loto} alt="Log OZlotto" />
             <LotteryListTitle>
@@ -105,7 +115,7 @@ const MainBody = () => {
               </LotoClock>
             </ContainerButton>
           </LotteryListItem>
-        </ul>
+        </LotteryDrawsList>
         <PlayBatton>Play uncoming lotteries online</PlayBatton>
         <PlayList>
           <PlayListItem>
@@ -192,100 +202,166 @@ const MainBody = () => {
             </PlayTime>
             <BtnPlayNow>Play Now</BtnPlayNow>
           </PlayListItem>
+          <PlayListItem>
+            <MainImg src={mega2} alt="Log mega millions" />
+            <StarImg src={star} alt="icon star" />
+            <PlayListTitle>
+              <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
+              Mega millions
+            </PlayListTitle>
+            <PlayText>$122 000 000</PlayText>
+            <PlayTime>
+              <AlarmImg src={alarm} alt="clock" />
+              1:22:01
+            </PlayTime>
+            <BtnPlayNow>Play Now</BtnPlayNow>
+          </PlayListItem>
+          <PlayListItem>
+            <MainImg src={mega2} alt="Log mega millions" />
+            <StarImg src={star} alt="icon star" />
+            <PlayListTitle>
+              <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
+              Mega millions
+            </PlayListTitle>
+            <PlayText>$122 000 000</PlayText>
+            <PlayTime>
+              <AlarmImg src={alarm} alt="clock" />
+              1:22:01
+            </PlayTime>
+            <BtnPlayNow>Play Now</BtnPlayNow>
+          </PlayListItem>
+          <PlayListItem>
+            <MainImg src={mega2} alt="Log mega millions" />
+            <StarImg src={star} alt="icon star" />
+            <PlayListTitle>
+              <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
+              Mega millions
+            </PlayListTitle>
+            <PlayText>$122 000 000</PlayText>
+            <PlayTime>
+              <AlarmImg src={alarm} alt="clock" />
+              1:22:01
+            </PlayTime>
+            <BtnPlayNow>Play Now</BtnPlayNow>
+          </PlayListItem>
+          <PlayListItem>
+            <MainImg src={mega2} alt="Log mega millions" />
+            <StarImg src={star} alt="icon star" />
+            <PlayListTitle>
+              <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
+              Mega millions
+            </PlayListTitle>
+            <PlayText>$122 000 000</PlayText>
+            <PlayTime>
+              <AlarmImg src={alarm} alt="clock" />
+              1:22:01
+            </PlayTime>
+            <BtnPlayNow>Play Now</BtnPlayNow>
+          </PlayListItem>
         </PlayList>
         <LinkLotteries href="https://github.com/ElenaStepanchuk/test">
           All lotteries »
         </LinkLotteries>
-        <PlayBatton>Biggest lottery winner</PlayBatton>
-        <ContainerWonPeople>
-          <WonPeopleTitle>
-            <WonIcon src={lottoStar} alt="icon lotto star" />
-            won<WonPeopleTitleSpan>€100 000 000</WonPeopleTitleSpan>
-          </WonPeopleTitle>
-          <PhotoWonPeople src={photoWon} alt="won people" />
-          <ResultsText>
-            uk lotto results: <ResultsTextSpan>07</ResultsTextSpan>
-            <ResultsTextSpan>07</ResultsTextSpan>
-            <ResultsTextSpan>07</ResultsTextSpan>
-            <ResultsTextSpan>07</ResultsTextSpan>
-            <ResultsTextSpan>07</ResultsTextSpan>
-          </ResultsText>
-          <DateText>Date: 20.11.2021</DateText>
-          <WonPeopleTitle2>Shaun Vincent a Lottery Winner</WonPeopleTitle2>
-          <WonPeopleText>
-            Shaun Vincent, from Barnsley, celebrates his £1,158,038 National
-            Lottery win after his cheque presentation at the Cedar Court Hotel,
-            Wakefield.
-          </WonPeopleText>
-          <WonPeopleLink href="https://github.com/ElenaStepanchuk/test">
-            Read the full story
-          </WonPeopleLink>
-          <WonPeopleButton>Play Now</WonPeopleButton>
-        </ContainerWonPeople>
-        <PlayBatton>Our latest winners</PlayBatton>
-        <ContainerTotalPrizes>
-          <TotalPrizesTitle>Total prizes paid out</TotalPrizesTitle>
-          <TotalPrizesText1>US$ 107 233 768</TotalPrizesText1>
-          <TotalPrizesText2>
-            6 975 146 <TotalPrizesTextSpan>winning tickets</TotalPrizesTextSpan>
-          </TotalPrizesText2>
-        </ContainerTotalPrizes>
-        <WinnersList>
-          <WinnersListItem>
-            <WinnersListIcon src={winnerIcon} alt="winner icon" />
-            <WinnersListDate>20.11.2021</WinnersListDate>
-            <WinnersListName>
-              <WinnersListFlagGerm src={germany} alt="flag Germany" />
-              J.J won Р175
-            </WinnersListName>
-            <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
-          </WinnersListItem>
-          <WinnersListItem>
-            <WinnersListIcon src={winnerIcon} alt="winner icon" />
-            <WinnersListDate>20.11.2021</WinnersListDate>
-            <WinnersListName>
-              <WinnersListFlagGerm src={germany} alt="flag Germany" />
-              J.J won Р175
-            </WinnersListName>
-            <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
-          </WinnersListItem>
-          <WinnersListItem>
-            <WinnersListIcon src={winnerIcon} alt="winner icon" />
-            <WinnersListDate>20.11.2021</WinnersListDate>
-            <WinnersListName>
-              <WinnersListFlagGerm src={germany} alt="flag Germany" />
-              J.J won Р175
-            </WinnersListName>
-            <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
-          </WinnersListItem>
-          <WinnersListItem>
-            <WinnersListIcon src={winnerIcon} alt="winner icon" />
-            <WinnersListDate>20.11.2021</WinnersListDate>
-            <WinnersListName>
-              <WinnersListFlagGerm src={germany} alt="flag Germany" />
-              J.J won Р175
-            </WinnersListName>
-            <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
-          </WinnersListItem>
-          <WinnersListItem>
-            <WinnersListIcon src={winnerIcon} alt="winner icon" />
-            <WinnersListDate>20.11.2021</WinnersListDate>
-            <WinnersListName>
-              <WinnersListFlagGerm src={germany} alt="flag Germany" />
-              J.J won Р175
-            </WinnersListName>
-            <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
-          </WinnersListItem>
-          <WinnersListItem>
-            <WinnersListIcon src={winnerIcon} alt="winner icon" />
-            <WinnersListDate>20.11.2021</WinnersListDate>
-            <WinnersListName>
-              <WinnersListFlagGerm src={germany} alt="flag Germany" />
-              J.J won Р175
-            </WinnersListName>
-            <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
-          </WinnersListItem>
-        </WinnersList>
+        <LinkMoreDetails href="https://github.com/ElenaStepanchuk/test">
+          More Details »
+        </LinkMoreDetails>
+        <ContainerOwnWon>
+          <div>
+            <PlayBatton>Biggest lottery winner</PlayBatton>
+            <ContainerWonPeople>
+              <WonPeopleTitle>
+                <WonIcon src={lottoStar} alt="icon lotto star" />
+                won<WonPeopleTitleSpan>€100 000 000</WonPeopleTitleSpan>
+              </WonPeopleTitle>
+              <PhotoWonPeople src={photoWon} alt="won people" />
+              <ResultsText>
+                uk lotto results: <ResultsTextSpan>07</ResultsTextSpan>
+                <ResultsTextSpan>07</ResultsTextSpan>
+                <ResultsTextSpan>07</ResultsTextSpan>
+                <ResultsTextSpan>07</ResultsTextSpan>
+                <ResultsTextSpan>07</ResultsTextSpan>
+              </ResultsText>
+              <DateText>Date: 20.11.2021</DateText>
+              <WonPeopleTitle2>Shaun Vincent a Lottery Winner</WonPeopleTitle2>
+              <WonPeopleText>
+                Shaun Vincent, from Barnsley, celebrates his £1,158,038 National
+                Lottery win after his cheque presentation at the Cedar Court
+                Hotel, Wakefield.
+              </WonPeopleText>
+              <WonPeopleLink href="https://github.com/ElenaStepanchuk/test">
+                Read the full story
+              </WonPeopleLink>
+              <WonPeopleButton>Play Now</WonPeopleButton>
+            </ContainerWonPeople>
+          </div>
+          <div>
+            <PlayBatton>Our latest winners</PlayBatton>
+            <ContainerTotalPrizes>
+              <TotalPrizesTitle>Total prizes paid out</TotalPrizesTitle>
+              <TotalPrizesText1>US$ 107 233 768</TotalPrizesText1>
+              <TotalPrizesText2>
+                6 975 146
+                <TotalPrizesTextSpan>winning tickets</TotalPrizesTextSpan>
+              </TotalPrizesText2>
+            </ContainerTotalPrizes>
+            <WinnersList>
+              <WinnersListItem>
+                <WinnersListIcon src={winnerIcon} alt="winner icon" />
+                <WinnersListDate>20.11.2021</WinnersListDate>
+                <WinnersListName>
+                  <WinnersListFlagGerm src={germany} alt="flag Germany" />
+                  J.J won Р175
+                </WinnersListName>
+                <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
+              </WinnersListItem>
+              <WinnersListItem>
+                <WinnersListIcon src={winnerIcon} alt="winner icon" />
+                <WinnersListDate>20.11.2021</WinnersListDate>
+                <WinnersListName>
+                  <WinnersListFlagGerm src={germany} alt="flag Germany" />
+                  J.J won Р175
+                </WinnersListName>
+                <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
+              </WinnersListItem>
+              <WinnersListItem>
+                <WinnersListIcon src={winnerIcon} alt="winner icon" />
+                <WinnersListDate>20.11.2021</WinnersListDate>
+                <WinnersListName>
+                  <WinnersListFlagGerm src={germany} alt="flag Germany" />
+                  J.J won Р175
+                </WinnersListName>
+                <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
+              </WinnersListItem>
+              <WinnersListItem>
+                <WinnersListIcon src={winnerIcon} alt="winner icon" />
+                <WinnersListDate>20.11.2021</WinnersListDate>
+                <WinnersListName>
+                  <WinnersListFlagGerm src={germany} alt="flag Germany" />
+                  J.J won Р175
+                </WinnersListName>
+                <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
+              </WinnersListItem>
+              <WinnersListItem>
+                <WinnersListIcon src={winnerIcon} alt="winner icon" />
+                <WinnersListDate>20.11.2021</WinnersListDate>
+                <WinnersListName>
+                  <WinnersListFlagGerm src={germany} alt="flag Germany" />
+                  J.J won Р175
+                </WinnersListName>
+                <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
+              </WinnersListItem>
+              <WinnersListItem>
+                <WinnersListIcon src={winnerIcon} alt="winner icon" />
+                <WinnersListDate>20.11.2021</WinnersListDate>
+                <WinnersListName>
+                  <WinnersListFlagGerm src={germany} alt="flag Germany" />
+                  J.J won Р175
+                </WinnersListName>
+                <WinnersListInfo>in 7 ИЗ 49 draw #13476</WinnersListInfo>
+              </WinnersListItem>
+            </WinnersList>
+          </div>
+        </ContainerOwnWon>
       </BodyContainer>
     </>
   );
@@ -297,6 +373,10 @@ const BodyContainer = styled.div`
   margin: 0 auto 0 auto;
   padding: 16px 16px 32px 16px;
   font-family: Roboto;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding: 30px 15px 75px 15px;
+  }
 `;
 const BannerImg = styled.img`
   display: block;
@@ -308,10 +388,18 @@ const ListItem = styled.li`
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   position: relative;
-  padding: 4px 8px 6px 5px;
+  padding: 5px 8px 5px 5px;
   width: 343px;
   :not(:last-child) {
     margin-bottom: 12px;
+    padding: 5px 15px 5px 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 380px;
+    height: 90px;
+    :not(:last-child) {
+      margin-right: 15px;
+    }
   }
 `;
 const ListImg = styled.img`
@@ -319,8 +407,12 @@ const ListImg = styled.img`
   position: absolute;
   top: 9px;
   left: 5px;
+  @media screen and (min-width: 1200px) {
+    top: 10px;
+    left: 5px;
+  }
 `;
-const ListTitle = styled.a`
+const ListTitle = styled.h3`
   display: flex;
   margin-left: 80px;
   font-style: normal;
@@ -329,10 +421,14 @@ const ListTitle = styled.a`
   line-height: 1.19;
   color: #000000;
   text-transform: uppercase;
-  margin-bottom: 8px;
   text-decoration: none;
+  margin-top: 0;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
 `;
-const ListLink = styled.span`
+const ListLink = styled.a`
   display: flex;
   font-style: normal;
   font-weight: 500;
@@ -343,6 +439,10 @@ const ListLink = styled.span`
   text-decoration: underline;
   margin-left: auto;
   text-transform: none;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 `;
 const ListText = styled.p`
   font-style: normal;
@@ -362,6 +462,18 @@ const LotteryTitle = styled.h2`
   justify-content: end;
   text-transform: uppercase;
   margin: 30px 0 18px 0;
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 75px;
+    margin-bottom: 30px;
+  }
+`;
+const LotteryDrawsList = styled.ul`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-bottom: 76px;
+  }
 `;
 const LotteryListItem = styled.li`
   list-style-type: none;
@@ -373,12 +485,27 @@ const LotteryListItem = styled.li`
   :not(:last-child) {
     margin-bottom: 15px;
   }
+  @media screen and (min-width: 1200px) {
+    width: 380px;
+    :not(:last-child) {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
 `;
 const LotteryListImg = styled.img`
   display: block;
   position: absolute;
   top: 4px;
   left: 24px;
+  width: 127px;
+  height: 80px;
+  @media screen and (min-width: 1200px) {
+    width: 141px;
+    height: 80px;
+    top: 4px;
+    left: 24px;
+  }
 `;
 const LotteryListTitle = styled.h2`
   font-style: normal;
@@ -391,12 +518,15 @@ const LotteryListTitle = styled.h2`
   text-transform: uppercase;
   padding: 0;
   margin: 23px 19px 0 0;
+  @media screen and (min-width: 1200px) {
+    margin: 24px 45px 0 0;
+  }
 `;
 const IconFlag = styled.img`
   display: flex;
   margin: 0 10px 0 0;
 `;
-const LotteryListText = styled.h3`
+const LotteryListText = styled.p`
   font-style: normal;
   display: flex;
   font-weight: 700;
@@ -406,6 +536,11 @@ const LotteryListText = styled.h3`
   justify-content: end;
   padding: 0;
   margin: 12px 19px 20px 0;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 0.85;
+    margin: 14.5px 39px 12px 0;
+  }
 `;
 const ContainerButton = styled.div`
   display: flex;
@@ -426,6 +561,12 @@ const LotteryListButton = styled.button`
   border-radius: 8px;
   border: none;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    width: 171px;
+    color: #000000;
+    margin: 11px 0 11px 12px;
+    padding: 6px 52px;
+  }
 `;
 const LotoClock = styled.p`
   display: flex;
@@ -435,6 +576,9 @@ const LotoClock = styled.p`
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
+  @media screen and (min-width: 1200px) {
+    margin-left: 40px;
+  }
 `;
 const LotoClockImg = styled.img`
   width: 18px;
@@ -455,6 +599,15 @@ const PlayBatton = styled.button`
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.33;
+    margin-bottom: 15px;
+  }
 `;
 const PlayList = styled.ul`
   width: 326px;
@@ -464,6 +617,12 @@ const PlayList = styled.ul`
   grid-row-gap: 16px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 1200px) {
+    width: 1100px;
+    grid-template-columns: 208px 208px 208px 208px 208px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
 `;
 const PlayListItem = styled.li`
   position: relative;
@@ -471,11 +630,23 @@ const PlayListItem = styled.li`
   border-radius: 8px;
   list-style-type: none;
   padding: 16px 8px 10px 8px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    padding: 12px 13px 13px 13px;
+  }
 `;
 const MainImg = styled.img`
   position: absolute;
   top: 16px;
   left: calc(100% / 2 - 40px);
+  width: 81px;
+  height: 78px;
+  @media screen and (min-width: 1200px) {
+    width: 96px;
+    height: 94px;
+    top: 12px;
+    left: calc(100% / 2 - 48px);
+  }
 `;
 const StarImg = styled.img`
   display: flex;
@@ -483,9 +654,15 @@ const StarImg = styled.img`
   top: 8px;
   right: 8px;
   width: 12px;
-  height: 12px; ;
+  height: 12px;
+  @media screen and (min-width: 1200px) {
+    top: 10px;
+    right: 18px;
+    width: 16px;
+    height: 16px;
+  }
 `;
-const PlayListTitle = styled.h2`
+const PlayListTitle = styled.h3`
   display: flex;
   color: #000000;
   font-style: normal;
@@ -495,9 +672,14 @@ const PlayListTitle = styled.h2`
   text-transform: uppercase;
   margin-top: 90px;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    margin-top: 122px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
 `;
 const PlayFlag = styled.img`
-  margin-right: 5px;
+  margin-right: 3px;
 `;
 const PlayText = styled.p`
   display: flex;
@@ -509,6 +691,10 @@ const PlayText = styled.p`
   margin-top: 8px;
   margin-bottom: 0;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.1;
+  }
 `;
 const PlayTime = styled.p`
   display: flex;
@@ -521,11 +707,19 @@ const PlayTime = styled.p`
   margin-bottom: 0;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.13;
+  }
 `;
 const AlarmImg = styled.img`
   width: 12px;
   height: 12px;
   margin-right: 4px;
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 16px;
+  }
 `;
 const BtnPlayNow = styled.button`
   width: 139px;
@@ -540,6 +734,11 @@ const BtnPlayNow = styled.button`
   text-align: center;
   color: #000000;
   margin-top: 8px;
+  @media screen and (min-width: 1200px) {
+    width: 182px;
+    height: 38px;
+    margin-top: 12px;
+  }
 `;
 const LinkLotteries = styled.a`
   display: flex;
@@ -550,6 +749,30 @@ const LinkLotteries = styled.a`
   color: #0061a3;
   margin-top: 12px;
   justify-content: end;
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+`;
+const LinkMoreDetails = styled.a`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #0061a3;
+    margin-top: 15px;
+    margin-bottom: 75px;
+    margin-right: 35px;
+    justify-content: end;
+  }
+`;
+/////
+const ContainerOwnWon = styled.div`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 const ContainerWonPeople = styled.div`
   width: 343px;
@@ -558,6 +781,13 @@ const ContainerWonPeople = styled.div`
   border-radius: 8px;
   padding-top: 16px;
   padding-bottom: 16.5px;
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    width: 775px;
+    height: 382px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 `;
 const WonPeopleTitle = styled.h2`
   display: flex;
@@ -568,17 +798,28 @@ const WonPeopleTitle = styled.h2`
   text-transform: uppercase;
   justify-content: center;
   margin: 0;
+  @media screen and (min-width: 1200px) {
+    font-size: 28px;
+    line-height: 1.29;
+  }
 `;
 const WonIcon = styled.img`
   display: block;
   width: 40px;
   height: 40px;
   margin-right: 20px;
+  @media screen and (min-width: 1200px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 const WonPeopleTitleSpan = styled.span`
   color: #0061a3;
   text-align: center;
   margin-left: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 10px;
+  }
 `;
 const PhotoWonPeople = styled.img`
   width: 297px;
@@ -588,6 +829,14 @@ const PhotoWonPeople = styled.img`
   margin-right: auto;
   margin-top: 12px;
   margin-bottom: 17.5px;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    height: 207px;
+    margin-left: 48px;
+    margin-right: 43px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
 `;
 const ResultsText = styled.p`
   font-family: 'Roboto';
@@ -599,6 +848,10 @@ const ResultsText = styled.p`
   color: #000000;
   text-align: center;
   margin: 0;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-left: 84px;
+  }
 `;
 const ResultsTextSpan = styled.span`
   color: #ffffff;
@@ -623,6 +876,11 @@ const DateText = styled.p`
   margin-right: 53.5px;
   margin-top: 5.5px;
   margin-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    justify-content: start;
+    margin-left: 84px;
+    margin-left: 250px;
+  }
 `;
 const WonPeopleTitle2 = styled.h3`
   display: flex;
@@ -634,6 +892,12 @@ const WonPeopleTitle2 = styled.h3`
   margin-bottom: 0;
   justify-content: center;
   color: #000000;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    left: 450px;
+    top: 94px;
+    margin-top: 0;
+  }
 `;
 const WonPeopleText = styled.p`
   display: flex;
@@ -643,6 +907,13 @@ const WonPeopleText = styled.p`
   line-height: 1.5;
   color: #000000;
   margin: 8px 16px 0 16px;
+  @media screen and (min-width: 1200px) {
+    width: 232px;
+    position: absolute;
+    left: 450px;
+    top: 133px;
+    margin: 0;
+  }
 `;
 const WonPeopleLink = styled.a`
   display: flex;
@@ -655,6 +926,12 @@ const WonPeopleLink = styled.a`
   margin-top: 12px;
   margin-bottom: 0px;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    left: 450px;
+    top: 270px;
+    margin: 0;
+  }
 `;
 const WonPeopleButton = styled.button`
   display: flex;
@@ -675,6 +952,14 @@ const WonPeopleButton = styled.button`
   margin-right: auto;
   padding: 9px;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    bottom: 20px;
+    right: 94px;
+    height: 40px;
+    padding: 11px;
+    margin-bottom: 0;
+  }
 `;
 
 const ContainerTotalPrizes = styled.div`
@@ -686,6 +971,10 @@ const ContainerTotalPrizes = styled.div`
   padding: 5px 47px 10px 47px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 1200px) {
+    width: 380px;
+    margin: 15px 0 30px 0;
+  }
 `;
 const TotalPrizesTitle = styled.h2`
   display: flex;
@@ -723,11 +1012,16 @@ const TotalPrizesTextSpan = styled.span`
   font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
+  margin-left: 10px;
 `;
 const WinnersList = styled.ul`
   height: 381px;
   width: 343px;
   overflow-y: auto;
+  @media screen and (min-width: 1200px) {
+    width: 380px;
+    height: 254px;
+  }
 `;
 const WinnersListItem = styled.li`
   width: 342px;
@@ -738,6 +1032,9 @@ const WinnersListItem = styled.li`
   list-style-type: none;
   :not(:last-child) {
     margin-bottom: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 380px;
   }
 `;
 const WinnersListIcon = styled.img`
@@ -780,4 +1077,10 @@ const WinnersListInfo = styled.p`
   color: #5f5f5f;
   margin-top: 0;
   margin-bottom: 0;
+`;
+const ContainerBannerImg = styled.picture``;
+const ListPickBuyWin = styled.ul`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 `;

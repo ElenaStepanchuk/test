@@ -9,7 +9,6 @@ import twitterDesktop from '../img/desktop/header/twitter.png';
 import messagerDesktop from '../img/desktop/header/messenger.png';
 import watsappDesktop from '../img/desktop/header/whatsapp.png';
 import flagAmericanDesktop from '../img/desktop/header/flagAmerican.png';
-import langIcon from '../img/desktop/header/buttonLang.png';
 
 const Header = () => {
   return (
@@ -43,16 +42,29 @@ const Header = () => {
         <SocialIcon src={messagerDesktop} alt="messager logo" />
         <SocialIcon src={watsappDesktop} alt="watsapp logo" />
         <LanguageMenu>
-          <LanguageName>
-            <Languageimg src={flagAmericanDesktop} alt="flag American" />
-            English
-          </LanguageName>
+          <Languageimg src={flagAmericanDesktop} alt="flag American" />
+          <LanguageName>English</LanguageName>
           <LangButton>
             {/* <LangIcon src={langIcon} alt="lang Icon" /> */}
             <AiOutlineDown />
           </LangButton>
         </LanguageMenu>
       </MenuRight>
+      <HeaderNav>
+        <NavLink href="https://github.com/ElenaStepanchuk/test">Home</NavLink>
+        <NavLink href="https://github.com/ElenaStepanchuk/test">
+          Play all lottery
+        </NavLink>
+        <NavLink href="https://github.com/ElenaStepanchuk/test">
+          Lottery groups
+        </NavLink>
+        <NavLink href="https://github.com/ElenaStepanchuk/test">
+          Promotions
+        </NavLink>
+        <MyAccountLink href="https://github.com/ElenaStepanchuk/test">
+          My account
+        </MyAccountLink>
+      </HeaderNav>
     </Container>
   );
 };
@@ -66,7 +78,7 @@ const Container = styled.header`
   position: relative;
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    padding: 10px 16px 0 10px;
+    padding: 10px 0 30px 0;
   }
 `;
 
@@ -172,8 +184,8 @@ const MenuRight = styled.div`
     display: none;
   }
   position: absolute;
-  top: 25px;
-  right: 38px;
+  top: 15px;
+  right: 20px;
 `;
 const SocialIcon = styled.img`
   width: 16px;
@@ -182,22 +194,73 @@ const SocialIcon = styled.img`
     margin-right: 10px;
   }
 `;
-const LanguageMenu = styled.div``;
+const LanguageMenu = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+`;
 const Languageimg = styled.img`
+  display: flex;
   width: 20px;
   height: 14px;
   margin-right: 5px;
+  margin-top: 4px;
 `;
 const LanguageName = styled.p`
+  display: flex;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
   color: #000000;
   margin: 10px 0 0 0;
+  margin: 0 5px 0 0;
 `;
-const LangButton = styled.button``;
-const LangIcon = styled.img`
-  width: 11px;
-  height: 7px;
+const LangButton = styled.button`
+  border: none;
+  background-color: #ffffff;
+  width: 24px;
+  height: 24px;
+`;
+// const LangIcon = styled.img`
+//   width: 11px;
+//   height: 7px;
+// `;
+const HeaderNav = styled.nav`
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  background: #f30000;
+  border-radius: 8px;
+  height: 34px;
+  padding: 7.5px 0 7.5px 0;
+  margin-top: 27px;
+`;
+const NavLink = styled.a`
+  padding: 0 25px 0 25px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-right: 1px solid #ffffff;
+  text-decoration: none;
+`;
+const MyAccountLink = styled.a`
+  display: block;
+  padding: 7.5px 38px 7.5px 38px;
+  width: 178px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #0061a3;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-top: -27px;
 `;
