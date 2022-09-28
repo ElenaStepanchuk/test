@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiOutlineDown } from 'react-icons/ai';
 import banner from '../img/body/banner.png';
 import computer from '../img/body/computer.png';
 import shop from '../img/body/shop.png';
@@ -20,6 +21,9 @@ import photoWon from '../img/body/photoWon.png';
 import bunnerDesktop from '../img/desktop/body/bannerDesktop.png';
 
 const MainBody = () => {
+  const ChangeLang = () => {
+    alert('Answer');
+  };
   return (
     <>
       <ContainerBannerImg>
@@ -31,7 +35,6 @@ const MainBody = () => {
           title="Company`s banner"
         />
       </ContainerBannerImg>
-      {/* <BannerImg src={banner} alt="Company`s banner" title="Company`s banner" /> */}
       <BodyContainer>
         <ListPickBuyWin>
           <ListItem>
@@ -362,6 +365,31 @@ const MainBody = () => {
             </WinnersList>
           </div>
         </ContainerOwnWon>
+        <ContainerAskedQuestion>
+          <TitleAskedQuestio>
+            FREQUENTLY ASKED QUESTION (F.A.Q.)
+          </TitleAskedQuestio>
+          <ListQuestions>
+            <ItemListQuestions>
+              Can I play the lottery online?
+              <ChangeButton type="button" onClick={ChangeLang}>
+                <AiOutlineDown />
+              </ChangeButton>
+            </ItemListQuestions>
+            <ItemListQuestions>
+              How will I get my wins?
+              <ChangeButton type="button" onClick={ChangeLang}>
+                <AiOutlineDown />
+              </ChangeButton>
+            </ItemListQuestions>
+            <ItemListQuestions>
+              Is it safe to play lottery online?
+              <ChangeButton type="button" onClick={ChangeLang}>
+                <AiOutlineDown />
+              </ChangeButton>
+            </ItemListQuestions>
+          </ListQuestions>
+        </ContainerAskedQuestion>
       </BodyContainer>
     </>
   );
@@ -372,7 +400,6 @@ const BodyContainer = styled.div`
   width: 375px;
   margin: 0 auto 0 auto;
   padding: 16px 16px 32px 16px;
-  font-family: Roboto;
   @media screen and (min-width: 1200px) {
     width: 1200px;
     padding: 30px 15px 75px 15px;
@@ -414,6 +441,7 @@ const ListImg = styled.img`
 `;
 const ListTitle = styled.h3`
   display: flex;
+  font-family: Roboto;
   margin-left: 80px;
   font-style: normal;
   font-weight: 500;
@@ -430,6 +458,7 @@ const ListTitle = styled.h3`
 `;
 const ListLink = styled.a`
   display: flex;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -446,6 +475,7 @@ const ListLink = styled.a`
 `;
 const ListText = styled.p`
   font-style: normal;
+  font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
@@ -454,6 +484,7 @@ const ListText = styled.p`
   text-align: justify;
 `;
 const LotteryTitle = styled.h2`
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -510,6 +541,7 @@ const LotteryListImg = styled.img`
 const LotteryListTitle = styled.h2`
   font-style: normal;
   display: flex;
+  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.21;
@@ -527,6 +559,7 @@ const IconFlag = styled.img`
   margin: 0 10px 0 0;
 `;
 const LotteryListText = styled.p`
+  font-family: Roboto;
   font-style: normal;
   display: flex;
   font-weight: 700;
@@ -549,6 +582,7 @@ const ContainerButton = styled.div`
   border-bottom-right-radius: 8px;
 `;
 const LotteryListButton = styled.button`
+  font-family: Roboto;
   font-style: normal;
   width: 144px;
   font-weight: 500;
@@ -572,6 +606,7 @@ const LotoClock = styled.p`
   display: flex;
   margin: 21px 0 0 50px;
   color: #ffffff;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -596,6 +631,7 @@ const PlayBatton = styled.button`
   margin-bottom: 16px;
   color: #ffffff;
   font-style: normal;
+  font-family: Roboto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
@@ -663,6 +699,7 @@ const StarImg = styled.img`
   }
 `;
 const PlayListTitle = styled.h3`
+  font-family: Roboto;
   display: flex;
   color: #000000;
   font-style: normal;
@@ -682,6 +719,7 @@ const PlayFlag = styled.img`
   margin-right: 3px;
 `;
 const PlayText = styled.p`
+  font-family: Roboto;
   display: flex;
   color: #000000;
   font-style: normal;
@@ -697,6 +735,7 @@ const PlayText = styled.p`
   }
 `;
 const PlayTime = styled.p`
+  font-family: Roboto;
   display: flex;
   color: #0061a3;
   font-style: normal;
@@ -727,6 +766,7 @@ const BtnPlayNow = styled.button`
   border-radius: 8px;
   background: #f7d300;
   border: none;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -742,6 +782,7 @@ const BtnPlayNow = styled.button`
 `;
 const LinkLotteries = styled.a`
   display: flex;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -756,6 +797,7 @@ const LinkLotteries = styled.a`
 const LinkMoreDetails = styled.a`
   @media screen and (min-width: 1200px) {
     display: flex;
+    font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -767,7 +809,6 @@ const LinkMoreDetails = styled.a`
     justify-content: end;
   }
 `;
-/////
 const ContainerOwnWon = styled.div`
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -790,6 +831,7 @@ const ContainerWonPeople = styled.div`
   }
 `;
 const WonPeopleTitle = styled.h2`
+  font-family: Roboto;
   display: flex;
   font-style: normal;
   font-weight: 500;
@@ -839,7 +881,7 @@ const PhotoWonPeople = styled.img`
   }
 `;
 const ResultsText = styled.p`
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -866,6 +908,7 @@ const ResultsTextSpan = styled.span`
   }
 `;
 const DateText = styled.p`
+  font-family: Roboto;
   display: flex;
   font-style: normal;
   font-weight: 400;
@@ -883,6 +926,7 @@ const DateText = styled.p`
   }
 `;
 const WonPeopleTitle2 = styled.h3`
+  font-family: Roboto;
   display: flex;
   font-style: normal;
   font-weight: 500;
@@ -900,6 +944,7 @@ const WonPeopleTitle2 = styled.h3`
   }
 `;
 const WonPeopleText = styled.p`
+  font-family: Roboto;
   display: flex;
   font-style: normal;
   font-weight: 400;
@@ -916,6 +961,7 @@ const WonPeopleText = styled.p`
   }
 `;
 const WonPeopleLink = styled.a`
+  font-family: Roboto;
   display: flex;
   font-style: normal;
   font-weight: 500;
@@ -934,6 +980,7 @@ const WonPeopleLink = styled.a`
   }
 `;
 const WonPeopleButton = styled.button`
+  font-family: Roboto;
   display: flex;
   width: 232px;
   height: 36px;
@@ -958,7 +1005,7 @@ const WonPeopleButton = styled.button`
     right: 94px;
     height: 40px;
     padding: 11px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 `;
 
@@ -973,10 +1020,11 @@ const ContainerTotalPrizes = styled.div`
   margin-right: auto;
   @media screen and (min-width: 1200px) {
     width: 380px;
-    margin: 15px 0 30px 0;
+    margin: 0 0 30px 0;
   }
 `;
 const TotalPrizesTitle = styled.h2`
+  font-family: Roboto;
   display: flex;
   font-style: normal;
   font-weight: 400;
@@ -989,6 +1037,7 @@ const TotalPrizesTitle = styled.h2`
 `;
 const TotalPrizesText1 = styled.p`
   display: flex;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -1000,6 +1049,7 @@ const TotalPrizesText1 = styled.p`
 `;
 const TotalPrizesText2 = styled.p`
   font-style: normal;
+  font-family: Roboto;
   font-weight: 500;
   font-size: 26px;
   line-height: 1.19;
@@ -1018,6 +1068,11 @@ const WinnersList = styled.ul`
   height: 381px;
   width: 343px;
   overflow-y: auto;
+  scrollbar-color: transparent transparent;
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
   @media screen and (min-width: 1200px) {
     width: 380px;
     height: 254px;
@@ -1045,6 +1100,7 @@ const WinnersListIcon = styled.img`
 `;
 const WinnersListDate = styled.p`
   display: flex;
+  font-family: Roboto;
   margin-left: 91px;
   margin-top: 5px;
   margin-bottom: 0;
@@ -1056,6 +1112,7 @@ const WinnersListDate = styled.p`
 `;
 const WinnersListName = styled.p`
   display: flex;
+  font-family: Roboto;
   margin-left: 91px;
   font-style: normal;
   font-weight: 500;
@@ -1069,6 +1126,7 @@ const WinnersListName = styled.p`
 const WinnersListFlagGerm = styled.img``;
 const WinnersListInfo = styled.p`
   display: flex;
+  font-family: Roboto;
   margin-left: 91px;
   font-style: normal;
   font-weight: 400;
@@ -1083,4 +1141,46 @@ const ListPickBuyWin = styled.ul`
   @media screen and (min-width: 1200px) {
     display: flex;
   }
+`;
+const ContainerAskedQuestion = styled.div`
+  margin-top: 75px;
+  margin-bottom: 78px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+`;
+const TitleAskedQuestio = styled.h2`
+  font-style: normal;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #000000;
+`;
+const ListQuestions = styled.ul``;
+const ItemListQuestions = styled.li`
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 0;
+  font-style: normal;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #0061a3;
+  width: 776px;
+  border-bottom: 1px solid #e0e0e0;
+  :not(:last-child) {
+    margin-bottom: 15px;
+  }
+`;
+const ChangeButton = styled.button`
+  border: none;
+  background-color: #ffffff;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 `;

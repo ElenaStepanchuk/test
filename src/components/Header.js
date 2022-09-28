@@ -11,12 +11,15 @@ import watsappDesktop from '../img/desktop/header/whatsapp.png';
 import flagAmericanDesktop from '../img/desktop/header/flagAmerican.png';
 
 const Header = () => {
+  const ChangeLang = () => {
+    alert('Change languege');
+  };
   return (
     <Container>
       <TitleText>Powerball</TitleText>
-      <BattonMenu type="button">
+      <ButtonMenu type="button" name="button">
         <ButtonImg src={menu} alt="It is menu" />
-      </BattonMenu>
+      </ButtonMenu>
       <ImgLog>
         <source srcset={logDesctop} media="(min-width: 1200px)" />
         <source srcset={log} media="(min-width: 375px)" />
@@ -44,8 +47,7 @@ const Header = () => {
         <LanguageMenu>
           <Languageimg src={flagAmericanDesktop} alt="flag American" />
           <LanguageName>English</LanguageName>
-          <LangButton>
-            {/* <LangIcon src={langIcon} alt="lang Icon" /> */}
+          <LangButton type="button" onClick={ChangeLang}>
             <AiOutlineDown />
           </LangButton>
         </LanguageMenu>
@@ -74,7 +76,6 @@ const Container = styled.header`
   width: 375px;
   margin: 0 auto 0 auto;
   padding: 15px 16px 0 16px;
-  font-family: Roboto;
   position: relative;
   @media screen and (min-width: 1200px) {
     width: 1200px;
@@ -86,7 +87,7 @@ const TitleText = styled.h1`
   visibility: hidden;
   font-size: 0;
 `;
-const BattonMenu = styled.button`
+const ButtonMenu = styled.button`
   display: flex;
   position: absolute;
   padding: 0;
@@ -135,6 +136,7 @@ const WelkomeBalanceText = styled.div`
 `;
 const WelcomeText = styled.h2`
   display: flex;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -153,6 +155,7 @@ const TextSpan = styled.span`
 `;
 const LinkLogout = styled.a`
   text-decoration: none;
+  font-family: Roboto;
   display: block;
   font-style: normal;
   font-weight: 500;
@@ -167,6 +170,7 @@ const LinkLogout = styled.a`
 `;
 const BalanceText = styled.h2`
   display: block;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -208,6 +212,7 @@ const Languageimg = styled.img`
 `;
 const LanguageName = styled.p`
   display: flex;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -222,15 +227,10 @@ const LangButton = styled.button`
   width: 24px;
   height: 24px;
 `;
-// const LangIcon = styled.img`
-//   width: 11px;
-//   height: 7px;
-// `;
 const HeaderNav = styled.nav`
   @media screen and (max-width: 1199px) {
     display: none;
   }
-
   background: #f30000;
   border-radius: 8px;
   height: 34px;
@@ -238,6 +238,7 @@ const HeaderNav = styled.nav`
   margin-top: 27px;
 `;
 const NavLink = styled.a`
+  font-family: Roboto;
   padding: 0 25px 0 25px;
   font-style: normal;
   font-weight: 700;
@@ -249,6 +250,7 @@ const NavLink = styled.a`
   text-decoration: none;
 `;
 const MyAccountLink = styled.a`
+  font-family: Roboto;
   display: block;
   padding: 7.5px 38px 7.5px 38px;
   width: 178px;
