@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.9578cbe7.css",
-    "main.js": "/test/static/js/main.42f21e47.js",
-    "static/media/bannerDesktop.png": "/test/static/media/bannerDesktop.a3fa6cce31b57f4d3749.png",
-    "static/media/fonStarDesktop.png": "/test/static/media/fonStarDesktop.847122e4250efa7ec228.png",
-    "static/media/banner.png": "/test/static/media/banner.dfa2cba2abbf441b31d4.png",
-    "static/media/photoWon.png": "/test/static/media/photoWon.cd9cbcc8634424abfeeb.png",
-    "static/media/fonStar.png": "/test/static/media/fonStar.02f3d95c657521a6d501.png",
-    "static/media/logo.png": "/test/static/media/logo.017a2d36897d2c0576a6.png",
-    "static/media/log.png": "/test/static/media/log.664c8b6b486b56555ba6.png",
-    "static/media/ctv.png": "/test/static/media/ctv.83ad8ede6d924a1987a6.png",
-    "static/media/winnerIcon.png": "/test/static/media/winnerIcon.54a860752b0eab9b8b90.png",
-    "index.html": "/test/index.html",
-    "main.9578cbe7.css.map": "/test/static/css/main.9578cbe7.css.map",
-    "main.42f21e47.js.map": "/test/static/js/main.42f21e47.js.map"
+    "main.css": "/static/css/main.9578cbe7.css",
+    "main.js": "/static/js/main.94ca99be.js",
+    "static/media/bannerDesktop.png": "/static/media/bannerDesktop.a3fa6cce31b57f4d3749.png",
+    "static/media/fonStarDesktop.png": "/static/media/fonStarDesktop.847122e4250efa7ec228.png",
+    "static/media/banner.png": "/static/media/banner.dfa2cba2abbf441b31d4.png",
+    "static/media/photoWon.png": "/static/media/photoWon.cd9cbcc8634424abfeeb.png",
+    "static/media/fonStar.png": "/static/media/fonStar.02f3d95c657521a6d501.png",
+    "static/media/logo.png": "/static/media/logo.017a2d36897d2c0576a6.png",
+    "static/media/log.png": "/static/media/log.664c8b6b486b56555ba6.png",
+    "static/media/ctv.png": "/static/media/ctv.83ad8ede6d924a1987a6.png",
+    "static/media/winnerIcon.png": "/static/media/winnerIcon.54a860752b0eab9b8b90.png",
+    "index.html": "/index.html",
+    "main.9578cbe7.css.map": "/static/css/main.9578cbe7.css.map",
+    "main.94ca99be.js.map": "/static/js/main.94ca99be.js.map"
   },
   "entrypoints": [
     "static/css/main.9578cbe7.css",
-    "static/js/main.42f21e47.js"
+    "static/js/main.94ca99be.js"
   ]
 }
