@@ -1,22 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.9578cbe7.css",
-    "main.js": "/static/js/main.94ca99be.js",
+    "main.js": "/static/js/main.0dc39cee.js",
     "static/media/bannerDesktop.png": "/static/media/bannerDesktop.a3fa6cce31b57f4d3749.png",
     "static/media/fonStarDesktop.png": "/static/media/fonStarDesktop.847122e4250efa7ec228.png",
     "static/media/banner.png": "/static/media/banner.dfa2cba2abbf441b31d4.png",
+    "static/media/fonUnderFotoDesktop.svg": "/static/media/fonUnderFotoDesktop.ec29981a72d4d5da2386d048a0f79fb8.svg",
     "static/media/photoWon.png": "/static/media/photoWon.cd9cbcc8634424abfeeb.png",
     "static/media/fonStar.png": "/static/media/fonStar.02f3d95c657521a6d501.png",
     "static/media/logo.png": "/static/media/logo.017a2d36897d2c0576a6.png",
+    "static/media/mega-millions-logo2.svg": "/static/media/mega-millions-logo2.cc465f9acf52478695453846e3af2710.svg",
     "static/media/log.png": "/static/media/log.664c8b6b486b56555ba6.png",
     "static/media/ctv.png": "/static/media/ctv.83ad8ede6d924a1987a6.png",
     "static/media/winnerIcon.png": "/static/media/winnerIcon.54a860752b0eab9b8b90.png",
     "index.html": "/index.html",
+    "static/media/star.svg": "/static/media/star.a83035f987cefe8a301c374b95a42bf3.svg",
+    "static/media/avatar.svg": "/static/media/avatar.220ecee8f7296eaaebcc22fe18749014.svg",
+    "static/media/menu.svg": "/static/media/menu.b3def2a1c07a3b5b710662259ec4472f.svg",
+    "static/media/expand-more.svg": "/static/media/expand-more.93c193ceba7b7e05f28541192322595a.svg",
     "main.9578cbe7.css.map": "/static/css/main.9578cbe7.css.map",
-    "main.94ca99be.js.map": "/static/js/main.94ca99be.js.map"
+    "main.0dc39cee.js.map": "/static/js/main.0dc39cee.js.map"
   },
   "entrypoints": [
     "static/css/main.9578cbe7.css",
-    "static/js/main.94ca99be.js"
+    "static/js/main.0dc39cee.js"
   ]
 }
