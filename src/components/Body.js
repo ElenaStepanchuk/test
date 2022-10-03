@@ -276,7 +276,6 @@ const MainBody = () => {
             <ContainerWonPeople>
               <WonIcon src={lottoStar} alt="icon lotto star" />
               <WonPeopleTitle>
-                {/* <WonIcon src={lottoStar} alt="icon lotto star" /> */}
                 won<WonPeopleTitleSpan>€100 000 000</WonPeopleTitleSpan>
               </WonPeopleTitle>
               <ContainerPhotoWonPeople>
