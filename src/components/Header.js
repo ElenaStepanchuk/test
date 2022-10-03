@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { AiOutlineDown } from 'react-icons/ai';
 import log from '../img/header/log.png';
-import menu from '../img/header/menu.png';
-import avatar from '../img/header/avatar.png';
+import menu from '../img/header/menu.svg';
+import avatar from '../img/header/avatar.svg';
 import logDesctop from '../img/desktop/header/logo.png';
 import facebookDesktop from '../img/desktop/header/facebook.png';
 import twitterDesktop from '../img/desktop/header/twitter.png';
 import messagerDesktop from '../img/desktop/header/messenger.png';
 import watsappDesktop from '../img/desktop/header/whatsapp.png';
 import flagAmericanDesktop from '../img/desktop/header/flagAmerican.png';
+import battonMore from '../img/desktop/header/expand-more.svg';
 
 const Header = () => {
   const ChangeLang = () => {
@@ -21,8 +21,8 @@ const Header = () => {
         <ButtonImg src={menu} alt="It is menu" />
       </ButtonMenu>
       <ImgLog>
-        <source srcset={logDesctop} media="(min-width: 1200px)" />
-        <source srcset={log} media="(min-width: 375px)" />
+        <source srcSet={logDesctop} media="(min-width: 1200px)" />
+        <source srcSet={log} media="(min-width: 375px)" />
         <img src={log} alt="Company`s logo" />
       </ImgLog>
       <BattonAvatar type="button">
@@ -30,13 +30,13 @@ const Header = () => {
       </BattonAvatar>
       <WelkomeBalanceText>
         <WelcomeText>
-          Welcome<TextSpan>&nbsp;Roma&nbsp;</TextSpan> -
+          Welcome<TextSpan1>&nbsp;Roma&nbsp;</TextSpan1> -
           <LinkLogout href="https://github.com/ElenaStepanchuk/test">
             &nbsp;Logout
           </LinkLogout>
         </WelcomeText>
         <BalanceText>
-          Your balance: <TextSpan>P 0,00</TextSpan>
+          Your balance: <TextSpan2>P 0,00</TextSpan2>
         </BalanceText>
       </WelkomeBalanceText>
       <MenuRight>
@@ -48,7 +48,7 @@ const Header = () => {
           <Languageimg src={flagAmericanDesktop} alt="flag American" />
           <LanguageName>English</LanguageName>
           <LangButton type="button" onClick={ChangeLang}>
-            <AiOutlineDown />
+            <ButtonMore src={battonMore} alt="icon button more" />
           </LangButton>
         </LanguageMenu>
       </MenuRight>
@@ -79,7 +79,7 @@ const Container = styled.header`
   position: relative;
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    padding: 10px 0 30px 0;
+    padding: 15px 0 30px 0;
   }
 `;
 
@@ -93,23 +93,27 @@ const ButtonMenu = styled.button`
   padding: 0;
   border: none;
   background-color: #ffffff;
-  top: 30px;
-  left: 18px;
+  top: 25px;
+  left: 16px;
   margin-left: 0;
   @media screen and (min-width: 1200px) {
     display: none;
   }
 `;
 const ButtonImg = styled.img`
+  width: 24px;
+  height: 24px;
   display: block;
 `;
 const ImgLog = styled.picture`
   display: flex;
   justify-content: center;
   @media screen and (min-width: 1200px) {
+    width: 279px;
+    height: 60px;
     display: block;
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 0;
   }
 `;
@@ -121,7 +125,6 @@ const BattonAvatar = styled.button`
   background-color: #ffffff;
   top: 25px;
   right: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media screen and (min-width: 1200px) {
     display: none;
   }
@@ -140,18 +143,25 @@ const WelcomeText = styled.h2`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.5;
   color: #000000;
   margin: 0 auto 0 0;
   @media screen and (min-width: 1200px) {
     margin-right: auto;
     margin-left: 308px;
-    margin-top: 9px;
+    margin-top: 19px;
+    margin-bottom: 0;
   }
 `;
-const TextSpan = styled.span`
+const TextSpan1 = styled.span`
   font-weight: 700;
   font-size: 14px;
+  line-height: 1.5;
+`;
+const TextSpan2 = styled.span`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
 `;
 const LinkLogout = styled.a`
   text-decoration: none;
@@ -160,13 +170,8 @@ const LinkLogout = styled.a`
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 1.5;
   color: #0061a3;
-  @media screen and (min-width: 1200px) {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.21;
-  }
 `;
 const BalanceText = styled.h2`
   display: block;
@@ -174,13 +179,13 @@ const BalanceText = styled.h2`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.2;
   color: #000000;
   margin: 0 0 0 auto;
   @media screen and (min-width: 1200px) {
     margin-right: auto;
     margin-left: 308px;
-    margin-top: 9px;
+    margin-top: 0;
   }
 `;
 const MenuRight = styled.div`
@@ -188,7 +193,7 @@ const MenuRight = styled.div`
     display: none;
   }
   position: absolute;
-  top: 15px;
+  top: 30px;
   right: 20px;
 `;
 const SocialIcon = styled.img`
@@ -202,6 +207,8 @@ const LanguageMenu = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  width: 112px;
+  height: 24px;
 `;
 const Languageimg = styled.img`
   display: flex;
@@ -209,6 +216,7 @@ const Languageimg = styled.img`
   height: 14px;
   margin-right: 5px;
   margin-top: 4px;
+  border-radius: 2px;
 `;
 const LanguageName = styled.p`
   display: flex;
@@ -226,6 +234,11 @@ const LangButton = styled.button`
   background-color: #ffffff;
   width: 24px;
   height: 24px;
+  padding: 0;
+`;
+const ButtonMore = styled.img`
+  width: 24px;
+  height: 24px;
 `;
 const HeaderNav = styled.nav`
   @media screen and (max-width: 1199px) {
@@ -241,9 +254,9 @@ const NavLink = styled.a`
   font-family: Roboto;
   padding: 0 25px 0 25px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.2;
   text-transform: uppercase;
   color: #ffffff;
   border-right: 1px solid #ffffff;
@@ -252,17 +265,17 @@ const NavLink = styled.a`
 const MyAccountLink = styled.a`
   font-family: Roboto;
   display: block;
-  padding: 7.5px 38px 7.5px 38px;
+  padding: 7.5px 38px 8px 38px;
   width: 178px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.2;
   text-transform: uppercase;
   color: #ffffff;
   background: #0061a3;
   text-decoration: none;
   border-radius: 8px;
   margin-left: auto;
-  margin-top: -27px;
+  margin-top: -28px;
 `;

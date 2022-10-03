@@ -15,21 +15,17 @@ const LeftBar = () => {
   );
 };
 export default LeftBar;
-const Container = styled.header`
-  width: 375px;
+const Container = styled.div`
   margin: 0 auto 0 auto;
-  padding: 15px 16px 0 16px;
-  font-family: Roboto;
   position: relative;
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding: 10px 0 30px 0;
-  }
+  width: 1200px;
+  padding: 0;
 `;
 const ContainerBar = styled.div`
   position: absolute;
   left: -338px;
-  top: 48px;
+  padding: 0;
+  top: -115px;
   @media screen and (max-width: 1199px) {
     display: none;
   }
@@ -42,6 +38,7 @@ const TitleBar = styled.h2`
   line-height: 1.21;
   color: #ee1d25;
   margin-bottom: 35px;
+  margin-top: 0;
 `;
 const Text1 = styled.p`
   font-family: Inter;

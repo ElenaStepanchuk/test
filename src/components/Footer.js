@@ -21,8 +21,8 @@ const Footer = () => {
   return (
     <FooterOwn>
       <ContainerFonImg>
-        <source srcset={fonStarDesktop} media="(min-width: 1200px)" />
-        <source srcset={fonStar} media="(min-width: 375px)" />
+        <source srcSet={fonStarDesktop} media="(min-width: 1200px)" />
+        <source srcSet={fonStar} media="(min-width: 375px)" />
         <FonImg src={fonStar} alt="Fon footer" title="Fon footer" />
       </ContainerFonImg>
       <FooterContainer>
@@ -43,7 +43,7 @@ const Footer = () => {
             <UsefulLink>Contact Us</UsefulLink>
             <UsefulLink>Website Use Policy</UsefulLink>
             <UsefulLink></UsefulLink>
-            <UsefulLink>Affiliate program</UsefulLink>
+            <UsefulLink2>Affiliate program</UsefulLink2>
           </UsefulLinksContainer>
           <UsefulLinksContainerDesktop>
             <UsefulLink>Lottery Results & Winners</UsefulLink>
@@ -55,7 +55,7 @@ const Footer = () => {
             <UsefulLink>Privacy Policy</UsefulLink>
             <UsefulLink>Acceptable Use Policy</UsefulLink>
             <UsefulLink>Website Use Policy</UsefulLink>
-            <UsefulLink>Affiliate program</UsefulLink>
+            <UsefulLink2>Affiliate program</UsefulLink2>
           </UsefulLinksContainerDesktop>
         </div>
         <div>
@@ -118,7 +118,7 @@ const FooterOwn = styled.footer`
   position: relative;
   width: 375px;
   margin: 0 auto 0 auto;
-
+  z-index: -1;
   background: linear-gradient(
       180deg,
       rgba(255, 253, 253, 0) 33.74%,
@@ -169,13 +169,13 @@ const WhatsAppTitle = styled.h2`
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.2;
   color: #000000;
   @media screen and (min-width: 1200px) {
     top: 133px;
     left: 160px;
     font-size: 16px;
-    line-height: 1.31;
+    line-height: 1.3;
   }
 `;
 const WhatsAppText = styled.p`
@@ -189,7 +189,7 @@ const WhatsAppText = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.2;
   color: #5f5f5f;
   @media screen and (min-width: 1200px) {
     top: 154px;
@@ -203,7 +203,7 @@ const UsefulLinksTitle = styled.h2`
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.31;
+  line-height: 1.3;
   text-transform: uppercase;
   color: #000000;
   margin-top: 16px;
@@ -247,6 +247,20 @@ const UsefulLink = styled.a`
     line-height: 1.31;
   }
 `;
+const UsefulLink2 = styled.a`
+  font-family: Roboto;
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+  @media screen and (min-width: 1200px) {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+`;
 const SecondTitle = styled.h2`
   font-family: Roboto;
   font-style: normal;
@@ -258,8 +272,8 @@ const SecondTitle = styled.h2`
   margin: 20px 0 0 0;
   @media screen and (min-width: 1200px) {
     font-size: 16px;
-    line-height: 1.31;
-    margin-top: 78px;
+    line-height: 1.3;
+    margin-top: 77px;
     margin-bottom: 15px;
   }
 `;
@@ -275,7 +289,7 @@ const SecondTitlePayment = styled.h2`
   @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 1.31;
-    margin-top: 78px;
+    margin-top: 77px;
     margin-bottom: 10px;
   }
 `;
@@ -291,7 +305,7 @@ const SecondTitleSecutity = styled.h2`
   @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 1.31;
-    margin-top: 78px;
+    margin-top: 77px;
     margin-bottom: 12px;
     margin-top: 30px;
   }
@@ -301,14 +315,14 @@ const Text1 = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
-  line-height: 1.5;
+  line-height: 1.2;
   color: #000000;
   margin-top: 0;
   margin-bottom: 0;
   @media screen and (min-width: 1200px) {
     width: 249px;
     font-size: 12px;
-    line-height: 1.2;
+    margin-bottom: 5px;
   }
 `;
 const Text2 = styled.p`
@@ -322,7 +336,7 @@ const Text2 = styled.p`
   margin-bottom: 0;
   @media screen and (min-width: 1200px) {
     font-size: 13px;
-    line-height: 1.62;
+    line-height: 1.6;
     width: 237px;
   }
 `;
@@ -331,6 +345,7 @@ const ListPaymentSecurity = styled.ul`
   display: grid;
   grid-template-columns: 152px 141px;
   grid-column-gap: 34px;
+
   @media screen and (min-width: 1200px) {
     width: 152px;
     display: inline;
@@ -354,21 +369,19 @@ const Card = styled.img`
   width: 44px;
   height: 26.4px;
 `;
-const ContainerSecurity = styled.li`
+const ContainerSecurity = styled.div`
   display: flex;
 `;
 const SecurityImgCtv = styled.img`
   display: block;
   width: 64px;
   height: 72px;
-  margin-top: 12px;
   margin-right: 10px;
 `;
 const SecurityImgComodo = styled.img`
   display: block;
   width: 66, 5px;
   height: 55px;
-  margin-top: 12px;
 `;
 const ContainerSocial = styled.div`
   @media screen and (min-width: 1200px) {

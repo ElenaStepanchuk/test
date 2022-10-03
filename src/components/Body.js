@@ -1,23 +1,25 @@
 import styled from 'styled-components';
-import { AiOutlineDown } from 'react-icons/ai';
+import battonMore from '../img/desktop/header/expand-more.svg';
 import banner from '../img/body/banner.png';
 import computer from '../img/body/computer.png';
 import shop from '../img/body/shop.png';
 import money from '../img/body/money.png';
-import loto from '../img/body/loto.png';
+
 import americanFlag from '../img/body/americanFlag.png';
 import clock from '../img/body/clock.png';
+import loto from '../img/body/loto.png';
 import mega from '../img/body/mega.png';
 import ball from '../img/body/ball.png';
-import mega2 from '../img/body/mega2.png';
+
+import mega2 from '../img/body/mega-millions-logo2.svg';
 import alarm from '../img/body/alarm.png';
-import star from '../img/body/star.png';
-import megaNoShadow from '../img/body/megaNoShadow.png';
+import star from '../img/body/star.svg';
 import starNoShadow from '../img/body/starNoShadow.png';
 import winnerIcon from '../img/body/winnerIcon.png';
 import germany from '../img/body/germany.png';
 import lottoStar from '../img/body/lotoStar.png';
 import photoWon from '../img/body/photoWon.png';
+import photoWonFon from '../img/desktop/body/fonUnderFotoDesktop.svg';
 import bunnerDesktop from '../img/desktop/body/bannerDesktop.png';
 
 const MainBody = () => {
@@ -27,8 +29,8 @@ const MainBody = () => {
   return (
     <>
       <ContainerBannerImg>
-        <source srcset={bunnerDesktop} media="(min-width: 1200px)" />
-        <source srcset={banner} media="(min-width: 375px)" />
+        <source srcSet={bunnerDesktop} media="(min-width: 1200px)" />
+        <source srcSet={banner} media="(min-width: 375px)" />
         <BannerImg
           src={banner}
           alt="Company`s banner"
@@ -38,7 +40,7 @@ const MainBody = () => {
       <BodyContainer>
         <ListPickBuyWin>
           <ListItem>
-            <ListImg src={computer} alt="It is computer" />
+            <ListImgComp src={computer} alt="It is computer" />
             <ListTitle href="https://github.com/ElenaStepanchuk/test">
               you pick
               <ListLink>Play Now »</ListLink>
@@ -49,7 +51,7 @@ const MainBody = () => {
             </ListText>
           </ListItem>
           <ListItem>
-            <ListImg src={shop} alt="It is shop" />
+            <ListImgShop src={shop} alt="It is shop" />
             <ListTitle href="https://github.com/ElenaStepanchuk/test">
               we buy
               <ListLink>More Details »</ListLink>
@@ -60,7 +62,7 @@ const MainBody = () => {
             </ListText>
           </ListItem>
           <ListItem>
-            <ListImg src={money} alt="It is money" />
+            <ListImgMoney src={money} alt="It is money" />
             <ListTitle href="https://github.com/ElenaStepanchuk/test">
               you win!!!
               <ListLink>Withdraw My Winnings »</ListLink>
@@ -89,7 +91,7 @@ const MainBody = () => {
             </ContainerButton>
           </LotteryListItem>
           <LotteryListItem>
-            <LotteryListImg src={mega} alt="Log mega millions" />
+            <LotteryListImg2 src={mega} alt="Log mega millions" />
             <LotteryListTitle>
               <IconFlag src={americanFlag} alt="Icon amerycan flag" />
               Mega millions
@@ -104,7 +106,7 @@ const MainBody = () => {
             </ContainerButton>
           </LotteryListItem>
           <LotteryListItem>
-            <LotteryListImg src={ball} alt="Log power ball" />
+            <LotteryListImg2 src={ball} alt="Log power ball" />
             <LotteryListTitle>
               <IconFlag src={americanFlag} alt="Icon amerycan flag" />
               Mega millions
@@ -136,7 +138,7 @@ const MainBody = () => {
             <BtnPlayNow>Play Now</BtnPlayNow>
           </PlayListItem>
           <PlayListItem>
-            <MainImg src={megaNoShadow} alt="Log mega millions" />
+            <MainImg src={mega2} alt="Log mega millions" />
             <StarImg src={starNoShadow} alt="icon star" />
             <PlayListTitle>
               <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
@@ -150,7 +152,7 @@ const MainBody = () => {
             <BtnPlayNow>Play Now</BtnPlayNow>
           </PlayListItem>
           <PlayListItem>
-            <MainImg src={megaNoShadow} alt="Log mega millions" />
+            <MainImg src={mega2} alt="Log mega millions" />
             <StarImg src={starNoShadow} alt="icon star" />
             <PlayListTitle>
               <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
@@ -164,7 +166,7 @@ const MainBody = () => {
             <BtnPlayNow>Play Now</BtnPlayNow>
           </PlayListItem>
           <PlayListItem>
-            <MainImg src={megaNoShadow} alt="Log mega millions" />
+            <MainImg src={mega2} alt="Log mega millions" />
             <StarImg src={starNoShadow} alt="icon star" />
             <PlayListTitle>
               <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
@@ -178,7 +180,7 @@ const MainBody = () => {
             <BtnPlayNow>Play Now</BtnPlayNow>
           </PlayListItem>
           <PlayListItem>
-            <MainImg src={megaNoShadow} alt="Log mega millions" />
+            <MainImg src={mega2} alt="Log mega millions" />
             <StarImg src={starNoShadow} alt="icon star" />
             <PlayListTitle>
               <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
@@ -192,7 +194,7 @@ const MainBody = () => {
             <BtnPlayNow>Play Now</BtnPlayNow>
           </PlayListItem>
           <PlayListItem>
-            <MainImg src={megaNoShadow} alt="Log mega millions" />
+            <MainImg src={mega2} alt="Log mega millions" />
             <StarImg src={starNoShadow} alt="icon star" />
             <PlayListTitle>
               <PlayFlag src={americanFlag} alt="Icon amerycan flag" />
@@ -272,11 +274,14 @@ const MainBody = () => {
           <div>
             <PlayBatton>Biggest lottery winner</PlayBatton>
             <ContainerWonPeople>
+              <WonIcon src={lottoStar} alt="icon lotto star" />
               <WonPeopleTitle>
-                <WonIcon src={lottoStar} alt="icon lotto star" />
+                {/* <WonIcon src={lottoStar} alt="icon lotto star" /> */}
                 won<WonPeopleTitleSpan>€100 000 000</WonPeopleTitleSpan>
               </WonPeopleTitle>
-              <PhotoWonPeople src={photoWon} alt="won people" />
+              <ContainerPhotoWonPeople>
+                <PhotoWonPeople src={photoWon} alt="won people" />
+              </ContainerPhotoWonPeople>
               <ResultsText>
                 uk lotto results: <ResultsTextSpan>07</ResultsTextSpan>
                 <ResultsTextSpan>07</ResultsTextSpan>
@@ -373,19 +378,19 @@ const MainBody = () => {
             <ItemListQuestions>
               Can I play the lottery online?
               <ChangeButton type="button" onClick={ChangeLang}>
-                <AiOutlineDown />
+                <img src={battonMore} alt="icon button more" />
               </ChangeButton>
             </ItemListQuestions>
             <ItemListQuestions>
               How will I get my wins?
               <ChangeButton type="button" onClick={ChangeLang}>
-                <AiOutlineDown />
+                <img src={battonMore} alt="icon button more" />
               </ChangeButton>
             </ItemListQuestions>
             <ItemListQuestions>
               Is it safe to play lottery online?
               <ChangeButton type="button" onClick={ChangeLang}>
-                <AiOutlineDown />
+                <img src={battonMore} alt="icon button more" />
               </ChangeButton>
             </ItemListQuestions>
           </ListQuestions>
@@ -415,8 +420,9 @@ const ListItem = styled.li`
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   position: relative;
-  padding: 5px 8px 5px 5px;
+  padding: 4px 8px 6px 5px;
   width: 343px;
+  height: 90px;
   :not(:last-child) {
     margin-bottom: 12px;
     padding: 5px 15px 5px 5px;
@@ -425,19 +431,34 @@ const ListItem = styled.li`
     width: 380px;
     height: 90px;
     :not(:last-child) {
+      margin-bottom: 0;
       margin-right: 15px;
     }
   }
 `;
-const ListImg = styled.img`
+const ListImgComp = styled.img`
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 70px;
+  height: 70px;
+`;
+const ListImgShop = styled.img`
   display: block;
   position: absolute;
   top: 9px;
   left: 5px;
-  @media screen and (min-width: 1200px) {
-    top: 10px;
-    left: 5px;
-  }
+  width: 72px;
+  height: 72px;
+`;
+const ListImgMoney = styled.img`
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  width: 81px;
+  height: 61px;
 `;
 const ListTitle = styled.h3`
   display: flex;
@@ -446,11 +467,12 @@ const ListTitle = styled.h3`
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.2;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 0;
+  margin-bottom: 8px;
   @media screen and (min-width: 1200px) {
     line-height: 1.5;
     margin-bottom: 5px;
@@ -462,9 +484,8 @@ const ListLink = styled.a`
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
-  line-height: 1.62;
+  line-height: 1.6;
   color: #0061a3;
-  justify-content: end;
   text-decoration: underline;
   margin-left: auto;
   text-transform: none;
@@ -478,7 +499,7 @@ const ListText = styled.p`
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.2;
   color: #5f5f5f;
   margin: 0 0 0 80px;
   text-align: justify;
@@ -488,7 +509,7 @@ const LotteryTitle = styled.h2`
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.3;
   color: #000000;
   justify-content: end;
   text-transform: uppercase;
@@ -508,11 +529,15 @@ const LotteryDrawsList = styled.ul`
 `;
 const LotteryListItem = styled.li`
   list-style-type: none;
-  border: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 0;
   border-radius: 8px;
   position: relative;
   padding: 0;
   width: 343px;
+  height: 150px;
   :not(:last-child) {
     margin-bottom: 15px;
   }
@@ -534,8 +559,22 @@ const LotteryListImg = styled.img`
   @media screen and (min-width: 1200px) {
     width: 141px;
     height: 80px;
-    top: 4px;
-    left: 24px;
+    top: 6px;
+    left: 28px;
+  }
+`;
+const LotteryListImg2 = styled.img`
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 24px;
+  width: 123px;
+  height: 77px;
+  @media screen and (min-width: 1200px) {
+    width: 141px;
+    height: 80px;
+    top: 6px;
+    left: 28px;
   }
 `;
 const LotteryListTitle = styled.h2`
@@ -544,19 +583,22 @@ const LotteryListTitle = styled.h2`
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.2;
   color: #000000;
   justify-content: end;
   text-transform: uppercase;
   padding: 0;
-  margin: 23px 19px 0 0;
+  margin: 23px 24px 0 0;
   @media screen and (min-width: 1200px) {
     margin: 24px 45px 0 0;
   }
 `;
 const IconFlag = styled.img`
   display: flex;
+  width: 20px;
+  height: 14px;
   margin: 0 10px 0 0;
+  border-radius: 2px;
 `;
 const LotteryListText = styled.p`
   font-family: Roboto;
@@ -564,11 +606,11 @@ const LotteryListText = styled.p`
   display: flex;
   font-weight: 700;
   font-size: 24px;
-  line-height: 0.92;
+  line-height: 0.9;
   color: #13902a;
   justify-content: end;
   padding: 0;
-  margin: 12px 19px 20px 0;
+  margin: 12px 24px 20px 0;
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 0.85;
@@ -613,6 +655,7 @@ const LotoClock = styled.p`
   line-height: 1;
   @media screen and (min-width: 1200px) {
     margin-left: 40px;
+    margin-top: 20px;
   }
 `;
 const LotoClockImg = styled.img`
@@ -635,6 +678,7 @@ const PlayBatton = styled.button`
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
+  text-transform: uppercase;
   @media screen and (min-width: 1200px) {
     width: 100%;
     padding-top: 10.5px;
@@ -662,6 +706,7 @@ const PlayList = styled.ul`
 `;
 const PlayListItem = styled.li`
   position: relative;
+  width: 155px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   list-style-type: none;
@@ -669,12 +714,13 @@ const PlayListItem = styled.li`
   text-align: center;
   @media screen and (min-width: 1200px) {
     padding: 12px 13px 13px 13px;
+    width: 208px;
   }
 `;
 const MainImg = styled.img`
   position: absolute;
   top: 16px;
-  left: calc(100% / 2 - 40px);
+  left: 37px;
   width: 81px;
   height: 78px;
   @media screen and (min-width: 1200px) {
@@ -705,18 +751,25 @@ const PlayListTitle = styled.h3`
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.2;
   text-transform: uppercase;
   margin-top: 90px;
   justify-content: center;
   @media screen and (min-width: 1200px) {
     margin-top: 122px;
     font-size: 14px;
-    line-height: 1.21;
+    margin-bottom: 0;
   }
 `;
 const PlayFlag = styled.img`
-  margin-right: 3px;
+  display: flex;
+  width: 20px;
+  height: 14px;
+  margin: 0 5px 0 0;
+  border-radius: 2px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 3px;
+  }
 `;
 const PlayText = styled.p`
   font-family: Roboto;
@@ -725,7 +778,7 @@ const PlayText = styled.p`
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.22;
+  line-height: 1.2;
   margin-top: 8px;
   margin-bottom: 0;
   justify-content: center;
@@ -741,14 +794,14 @@ const PlayTime = styled.p`
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 1.2;
   margin-top: 8px;
   margin-bottom: 0;
   justify-content: center;
   align-items: center;
   @media screen and (min-width: 1200px) {
     font-size: 16px;
-    line-height: 1.13;
+    line-height: 1.1;
   }
 `;
 const AlarmImg = styled.img`
@@ -761,7 +814,7 @@ const AlarmImg = styled.img`
   }
 `;
 const BtnPlayNow = styled.button`
-  width: 139px;
+  width: 138px;
   height: 36px;
   border-radius: 8px;
   background: #f7d300;
@@ -795,13 +848,14 @@ const LinkLotteries = styled.a`
   }
 `;
 const LinkMoreDetails = styled.a`
+  display: none;
   @media screen and (min-width: 1200px) {
     display: flex;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 1.33;
+    line-height: 1.3;
     color: #0061a3;
     margin-top: 15px;
     margin-bottom: 75px;
@@ -816,14 +870,15 @@ const ContainerOwnWon = styled.div`
   }
 `;
 const ContainerWonPeople = styled.div`
+  position: relative;
   width: 343px;
   height: 504px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding-top: 16px;
   padding-bottom: 16.5px;
+  overflow: hidden;
   @media screen and (min-width: 1200px) {
-    position: relative;
     width: 775px;
     height: 382px;
     padding-top: 20px;
@@ -836,23 +891,28 @@ const WonPeopleTitle = styled.h2`
   font-style: normal;
   font-weight: 500;
   font-size: 27px;
-  line-height: 1.33;
+  line-height: 1.3;
   text-transform: uppercase;
   justify-content: center;
-  margin: 0;
+  margin: 0 0 0 82px;
   @media screen and (min-width: 1200px) {
     font-size: 28px;
-    line-height: 1.29;
+    line-height: 1.3;
+    margin-top: 7px;
   }
 `;
 const WonIcon = styled.img`
+  position: absolute;
   display: block;
   width: 40px;
   height: 40px;
-  margin-right: 20px;
+  top: 16px;
+  left: 22px;
   @media screen and (min-width: 1200px) {
     width: 50px;
     height: 50px;
+    top: 20px;
+    left: 173.5px;
   }
 `;
 const WonPeopleTitleSpan = styled.span`
@@ -861,6 +921,9 @@ const WonPeopleTitleSpan = styled.span`
   margin-left: 8px;
   @media screen and (min-width: 1200px) {
     margin-left: 10px;
+    font-size: 36px;
+    line-height: 0.9;
+    font-weight: 700;
   }
 `;
 const PhotoWonPeople = styled.img`
@@ -870,22 +933,30 @@ const PhotoWonPeople = styled.img`
   margin-left: auto;
   margin-right: auto;
   margin-top: 12px;
-  margin-bottom: 17.5px;
+  margin-bottom: 16px;
   @media screen and (min-width: 1200px) {
     width: 358px;
     height: 207px;
-    margin-left: 48px;
+    margin-left: 28px;
     margin-right: 43px;
     margin-top: 25px;
     margin-bottom: 20px;
   }
 `;
+const ContainerPhotoWonPeople = styled.div`
+  background-image: url(${photoWonFon});
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1200px) {
+    margin-left: 20px;
+  }
+`;
+
 const ResultsText = styled.p`
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.2;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
@@ -900,6 +971,8 @@ const ResultsTextSpan = styled.span`
   background: red;
   border-radius: 50%;
   padding: 3px;
+  font-size: 12px;
+
   :first-child {
     margin-left: 16px;
   }
@@ -913,11 +986,11 @@ const DateText = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.3;
   color: #000000;
   justify-content: end;
   margin-right: 53.5px;
-  margin-top: 5.5px;
+  margin-top: 6px;
   margin-bottom: 0;
   @media screen and (min-width: 1200px) {
     justify-content: start;
@@ -966,7 +1039,7 @@ const WonPeopleLink = styled.a`
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 1.2;
   color: #007aff;
   text-decoration: none;
   margin-top: 12px;
@@ -974,7 +1047,7 @@ const WonPeopleLink = styled.a`
   justify-content: center;
   @media screen and (min-width: 1200px) {
     position: absolute;
-    left: 450px;
+    left: 508px;
     top: 270px;
     margin: 0;
   }
@@ -1004,15 +1077,15 @@ const WonPeopleButton = styled.button`
     bottom: 20px;
     right: 94px;
     height: 40px;
-    padding: 11px;
-    margin-bottom: 15px;
+    padding: 9.5px 86px 12.5px 86px;
+    margin: 0;
   }
 `;
 
 const ContainerTotalPrizes = styled.div`
   width: 343px;
   height: 98px;
-  margin: 16px;
+  margin-bottom: 16px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 5px 47px 10px 47px;
@@ -1029,7 +1102,7 @@ const TotalPrizesTitle = styled.h2`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.22;
+  line-height: 1.2;
   color: #000000;
   margin-bottom: 5px;
   margin-top: 0;
@@ -1041,7 +1114,7 @@ const TotalPrizesText1 = styled.p`
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 0.85;
+  line-height: 0.8;
   color: #13902a;
   justify-content: center;
   margin-bottom: 5px;
@@ -1052,7 +1125,7 @@ const TotalPrizesText2 = styled.p`
   font-family: Roboto;
   font-weight: 500;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
   color: #000000;
   margin-top: 0;
   margin-bottom: 0;
@@ -1061,7 +1134,6 @@ const TotalPrizesTextSpan = styled.span`
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.22;
   margin-left: 10px;
 `;
 const WinnersList = styled.ul`
@@ -1080,6 +1152,7 @@ const WinnersList = styled.ul`
 `;
 const WinnersListItem = styled.li`
   width: 342px;
+  height: 78px;
   position: relative;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -1089,20 +1162,26 @@ const WinnersListItem = styled.li`
     margin-bottom: 8px;
   }
   @media screen and (min-width: 1200px) {
-    width: 380px;
+    width: 379px;
   }
 `;
 const WinnersListIcon = styled.img`
   display: flex;
   position: absolute;
+  width: 75px;
+  height: 58px;
   top: 10px;
   left: 15px;
+  @media screen and (min-width: 1200px) {
+    width: 75px;
+    height: 58px;
+  }
 `;
 const WinnersListDate = styled.p`
   display: flex;
   font-family: Roboto;
   margin-left: 91px;
-  margin-top: 5px;
+  margin-top: 4px;
   margin-bottom: 0;
   font-style: normal;
   font-weight: 400;
@@ -1112,18 +1191,23 @@ const WinnersListDate = styled.p`
 `;
 const WinnersListName = styled.p`
   display: flex;
+  height: 18px;
+  text-align: center;
   font-family: Roboto;
-  margin-left: 91px;
+  margin-left: 90px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
-  text-align: center;
   color: #000000;
   margin-top: 0;
   margin-bottom: 0;
 `;
-const WinnersListFlagGerm = styled.img``;
+const WinnersListFlagGerm = styled.img`
+  width: 20px;
+  height: 18.18px;
+  margin-right: 5px;
+`;
 const WinnersListInfo = styled.p`
   display: flex;
   font-family: Roboto;
@@ -1144,7 +1228,7 @@ const ListPickBuyWin = styled.ul`
 `;
 const ContainerAskedQuestion = styled.div`
   margin-top: 75px;
-  margin-bottom: 78px;
+
   @media screen and (max-width: 1199px) {
     display: none;
   }
@@ -1169,10 +1253,11 @@ const ItemListQuestions = styled.li`
   font-family: Roboto;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.3;
   color: #0061a3;
   width: 776px;
   border-bottom: 1px solid #e0e0e0;
+  height: 37px;
   :not(:last-child) {
     margin-bottom: 15px;
   }
@@ -1182,5 +1267,6 @@ const ChangeButton = styled.button`
   background-color: #ffffff;
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 20px;
+  padding: 0;
 `;

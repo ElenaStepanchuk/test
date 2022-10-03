@@ -6,8 +6,8 @@ import LeftBar from './LeftBar';
 export const App = () => {
   return (
     <>
-      <LeftBar />
       <Header />
+      <LeftBar />
       <MainBody />
       <Footer />
     </>
